@@ -55,17 +55,21 @@ _body(context) {
                 height: 100,
               ),
               SizedBox(
-                width: 150,
-                height: 50,
-                child: TextButton(
-                    onPressed: null,
-                    style:
-                        TextButton.styleFrom(backgroundColor: Colors.red[500]),
+                  width: 150,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red[500],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20), // <-- Radius
+                      ),
+                    ),
                     child: const Text(
-                      "Get Started!",
-                      style: TextStyle(color: Colors.black),
-                    )),
-              )
+                      'Get Started!',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ))
             ],
           ),
         )
