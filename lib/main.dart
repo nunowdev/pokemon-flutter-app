@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_app/components/lobby.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,7 +59,12 @@ _body(context) {
                   width: 150,
                   height: 50,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Lobby()));
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red[500],
                       shape: RoundedRectangleBorder(
@@ -69,7 +75,7 @@ _body(context) {
                       'Get Started!',
                       style: TextStyle(fontSize: 16),
                     ),
-                  ))
+                  )),
             ],
           ),
         )
